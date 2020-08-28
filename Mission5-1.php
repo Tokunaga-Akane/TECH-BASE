@@ -183,10 +183,6 @@ if(isset($_POST["editnum"])&&isset($_POST["editpass"])){//$editと$editpassの�
     elseif(empty($_POST["comment"])&&(!empty($_POST["name"])&&isset($_POST["sendpass"]))){
         echo '<span style="color:red">コメントを入力してください</span>';
         echo "<hr>";
-        $delete=$_POST["delete"];//削除フォームに入力された投稿番号
-        $ridpass=$_POST["ridpass"];//削除フォーム・パスワード
-        $edit=$_POST["editnum"];//編集フォームに入力された投稿番号
-        $editpass=$_POST["editpass"];//編集フォーム・パスワード
     }##削除フォームにパスワードが入力されなかった（投稿番号は入力された）場合##
     elseif(!empty($_POST["delete"])&&empty($_POST["ridpass"])){
         echo '<span style="color:red">削除したい投稿番号のパスワードを入力してください</span>';
